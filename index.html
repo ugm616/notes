@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efed After Dark Editor's Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img id="logo" src="logo.png" alt="Ooh look, a logo!!!s">
+        </div>
+        <h1>Editors Notes</h1>
+    </header>
+
+    <main>
+        <table class="button-grid">
+            <tr>
+                <td class="text-column">0 Star Promo</td>
+                <td><button class="grid-button" data-mp3="audio/0a.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/0b.mp3">Second Time</button></td>
+            </tr>
+            <tr>
+                <td class="text-column">1 Star Promo</td>
+                <td><button class="grid-button" data-mp3="audio/1a.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/1b.mp3">Second Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/1c.mp3">Third Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/1d.mp3">Fourth Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/1e.mp3">Fifth Time</button></td>
+            </tr>
+            <tr>
+                <td class="text-column">2 Star Promo</td>
+                <td><button class="grid-button" data-mp3="audio/2a.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/2b.mp3">Second Time</button></td>
+            </tr>
+            <tr>
+                <td class="text-column">3 Star Promo</td>
+                <td><button class="grid-button" data-mp3="audio/3a.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/3b.mp3">Second Time</button></td>
+            </tr>
+            <tr>
+                <td class="text-column">4 Star Promo</td>
+                <td><button class="grid-button" data-mp3="audio/4a.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/4b.mp3">Second Time</button></td>
+            </tr>
+            <tr>
+                <td class="text-column">5 Star Promo</td>
+                <td><button class="grid-button" data-mp3="audio/5a.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/5b.mp3">Second Time</button></td>
+            </tr>
+            <tr>
+                <td class="text-column">If KC Luchador is mentioned</td>
+                <td><button class="grid-button" data-mp3="audio/kca.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/kcb.mp3">Second Time</button></td>
+            </tr>
+            <tr>
+                <td class="text-column">Slowing saying Fed name or initials</td>
+                <td><button class="grid-button" data-mp3="audio/feda.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/fedb.mp3">Second Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/fedc.mp3">Third Time</button></td>
+            </tr>
+            <tr>
+                <td class="text-column">Portrait Promo</td>
+                <td><button class="grid-button" data-mp3="audio/pora.mp3">First Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/porb.mp3">Second Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/porc.mp3">Third Time</button></td>
+                <td><button class="grid-button" data-mp3="audio/pord.mp3">Fourth Time</button></td>
+            </tr>
+        </table>
+    </main>
+
+    <!-- Modal for MP3 Player -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="audio-title"></div>
+            <div id="custom-audio-player">
+                <div class="player-controls">
+                    <button id="play-pause-button" class="control-button">
+                        <span class="play-icon">►</span>
+                        <span class="pause-icon" style="display:none;">❚❚</span>
+                    </button>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="current-time">0:00</span> / 
+                            <span class="total-time">0:00</span>
+                        </div>
+                    </div>
+                    <div class="volume-container">
+                        <button id="volume-button" class="control-button">🔊</button>
+                        <div class="volume-slider-container">
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </div>
+                </div>
+                <audio id="audio-element" style="display:none;"></audio>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
